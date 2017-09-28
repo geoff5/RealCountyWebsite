@@ -1,0 +1,7 @@
+urlparse
+urlopen
+os
+Files
+InvalidFileReferenceError
+_is_absolute
+contextlib

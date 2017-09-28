@@ -1,0 +1,8 @@
+_ESCAPE_SEQUENCE_REGEX
+parse_identifier
+_decode_escape_sequence
+TokenType
+parse_string
+try_parse_class_name
+re
+decode_escape_sequences

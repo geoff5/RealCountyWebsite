@@ -1,0 +1,13 @@
+imagemagick_trim
+_wmf_extensions
+base64
+img_element
+data_uri
+libreoffice_wmf_conversion
+subprocess
+shutil
+html
+os
+io
+tempfile
+inline
