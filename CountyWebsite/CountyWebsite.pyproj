@@ -36,6 +36,9 @@
     <Compile Include="CountyWebsite\database.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="CountyWebsite\utils.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="runserver.py" />
     <Compile Include="CountyWebsite\__init__.py" />
     <Compile Include="CountyWebsite\externalViews.py" />
@@ -43,7 +46,8 @@
   <ItemGroup>
     <Folder Include="CountyWebsite\" />
     <Folder Include="CountyWebsite\images\" />
-    <Folder Include="CountyWebsite\news\" />
+    <Folder Include="CountyWebsite\newsPage\" />
+    <Folder Include="CountyWebsite\newsDocs\" />
     <Folder Include="CountyWebsite\static\" />
     <Folder Include="CountyWebsite\static\content\" />
     <Folder Include="CountyWebsite\static\fonts\" />
@@ -52,6 +56,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CountyWebsite\images\CarlowFlag.png" />
+    <Content Include="CountyWebsite\newsDocs\TestNews.docx" />
+    <Content Include="CountyWebsite\newsDocs\TestNews2.docx" />
+    <Content Include="CountyWebsite\newsDocs\TestNews3.docx" />
     <Content Include="CountyWebsite\static\scripts\SiteScripts.js" />
     <Content Include="CountyWebsite\templates\login.html" />
     <Content Include="CountyWebsite\templates\news.html" />

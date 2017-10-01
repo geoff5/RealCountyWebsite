@@ -4,17 +4,14 @@ Routes and views for the flask application.
 
 from datetime import datetime
 from flask import render_template
-from CountyWebsite import app, cms, database
+from CountyWebsite import app, cms, database, utils
 
 @app.route('/')
 @app.route('/home')
 def home():
     """Renders the home page."""
-    htmlStories = []
-
-    newsStories = database.getNews()
-    for s in newsStories:
-        htmlStories.append(cms.convertWordDocToHTML(s[1]))
+    
+    
     
     return render_template(
         'index.html',
