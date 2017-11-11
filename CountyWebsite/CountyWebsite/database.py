@@ -11,7 +11,7 @@ config = {
 }
 
 def getHeadline(id):
-    sql = """SELECT headline FROM news  
+    sql = """SELECT headline, FROM news  
             WHERE newsID = %s"""    
 
     with DBcm.UseDatabase(config) as database:
@@ -20,8 +20,8 @@ def getHeadline(id):
     
     return rows[0][0]    
 
-def getNews():
-    sql = """SELECT headline, filename FROM news
+def getHomepageNews():
+    sql = """SELECT headline, paragraph FROM news
             ORDER BY newsID DESC LIMIT 3"""
     stories = []
     
@@ -50,5 +50,13 @@ def addNews(story):
           values
           (%s, %s, %s, %s, %s, %s)"""
     with DBcm.UseDatabase(config) as database:
-        database.execute(sql, (id, story[headline], date, story['author'], story['filename']))
-    
+        database.execute(sql, (id, story['headline'], date, story['author'], story['filename']))
+
+def addPlayer(player):
+    sql = """INSERT INTO players
+            (firstname,lastname,email,phonenumber,club,username,password,isboardmember,approved)
+            values
+            (%s,%s,%s,%s,%s,%s,%s,0,0)"""
+
+    with DBcm.UseDatabase(config) as database:
+        database.execute(sql, (player['firstname'],player['lastname'],player['email'],player['phonenumber'],player['club'],player['username'],player['password']))

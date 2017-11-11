@@ -1,0 +1,33 @@
+﻿{% extends "layout.html" %}
+
+
+{% block content %}
+
+<h1 align="center">Add a news Story</h1>
+<br><br><br />
+
+<div class="container">
+    <form class="form-inline" action="/storyAdded" method="post">
+
+        <div class="row">
+            <label class="col-md-2 col-form-label">File</label>
+            <div class="col-md-4">
+                <input type="file" required id="file" name="file" />
+            </div>
+        </div>
+        <br />
+
+        <div class="row">
+            <label class="col-md-2 col-form-label">Headline</label>
+            <div class="col-md-4">
+                <input type="text" required id="headline" name="headline" />
+            </div>
+        </div>
+        <br />
+        <div class="row row-centered">
+            <input class="btn btn-primary btn-lg" type="submit" value="Submit">
+        </div>
+    </form>
+</div>
+
+    {% endblock %}

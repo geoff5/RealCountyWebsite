@@ -4,6 +4,9 @@ from CountyWebsite import database
 
 def convertWordDocToHTMLFile(filename, id):
     path = os.getcwd() + "\\CountyWebsite\\news\\" + filename
+    
+        
+    
     with open(path, "rb") as file:
         result = mammoth.convert_to_html(file)
         html = result.value

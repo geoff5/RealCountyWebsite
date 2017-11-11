@@ -36,6 +36,9 @@
     <Compile Include="CountyWebsite\database.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="CountyWebsite\emails\emailSender.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="CountyWebsite\utils.py">
       <SubType>Code</SubType>
     </Compile>
@@ -46,6 +49,7 @@
   <ItemGroup>
     <Folder Include="CountyWebsite\" />
     <Folder Include="CountyWebsite\images\" />
+    <Folder Include="CountyWebsite\emails\" />
     <Folder Include="CountyWebsite\newsPage\" />
     <Folder Include="CountyWebsite\newsDocs\" />
     <Folder Include="CountyWebsite\static\" />
@@ -60,9 +64,11 @@
     <Content Include="CountyWebsite\newsDocs\TestNews2.docx" />
     <Content Include="CountyWebsite\newsDocs\TestNews3.docx" />
     <Content Include="CountyWebsite\static\scripts\SiteScripts.js" />
+    <Content Include="CountyWebsite\templates\addNewsStory.html" />
     <Content Include="CountyWebsite\templates\login.html" />
     <Content Include="CountyWebsite\templates\news.html" />
     <Content Include="CountyWebsite\templates\register.html" />
+    <Content Include="CountyWebsite\templates\registrationComplete.html" />
     <Content Include="requirements.txt" />
     <Content Include="CountyWebsite\static\content\bootstrap.css" />
     <Content Include="CountyWebsite\static\content\bootstrap.min.css" />

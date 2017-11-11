@@ -12,23 +12,11 @@
     <h1 align="center">Carlow Handball</h1>
 </div>
 
-<br /><br /><br />
-
-<h2 align="center">News Stories</h2>
-<br />
+{% for s in stories %}
 <div class="News">
-    <h3 align="center">Test</h3>
+    <h3 align="center"><a href="#">{{s[0]}}</a></h3>
+    <div>{{s[1] | safe}}</div><a href="#">Read More</a>
 </div>
+{% endfor %}
 
-<br /><br />
-
-<div class="News">
-    <h3 align="center">Test</h3>
-</div>
-
-<br /><br />
-
-<div class="News">
-    <h3 align="center">Test</h3>
-</div>
 {% endblock %}

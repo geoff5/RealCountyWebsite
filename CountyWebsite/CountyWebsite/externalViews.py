@@ -3,19 +3,18 @@ Routes and views for the flask application.
 """
 
 from datetime import datetime
-from flask import render_template
+from flask import render_template,request
 from CountyWebsite import app, cms, database, utils
 
 @app.route('/')
 @app.route('/home')
 def home():
     """Renders the home page."""
-    
-    
-    
+    stories = database.getHomepageNews()
     return render_template(
         'index.html',
         year=datetime.now().year,
+        stories=stories
     )
 
 @app.route('/contact')
@@ -53,6 +52,19 @@ def register():
         year=datetime.now().year
     )
 
+@app.route('/registrationComplete', methods=['GET','POST'])
+def registrationComplete():
+    player = {'firstname':'','lastname':'','email':'','phonenumber':'','club':'','username':'','password':''}
+    for k,v in request.form.items():
+        player[k] = request.form[k]
+    database.addPlayer(player)
+    return render_template(
+        'registrationComplete.html',
+        title='Registration Complete',
+        year=datetime.now().year
+        )      
+
+
 @app.route('/login')
 def login():
     """Renders the login page."""
@@ -61,3 +73,7 @@ def login():
         title='Login',
         year=datetime.now().year
     )
+
+@app.route('/storyAdded')
+def storyAdded():
+    pass
